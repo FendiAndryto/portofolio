@@ -31,11 +31,11 @@ export function Projects() {
       image: "/projects/server_infrastructure.png"
     },
     {
-      title: "UMKM Dashboard",
-      problem: "Small businesses struggle with tracking income and expenses across fragmented, non-digital systems.",
-      architecture: "Cross-platform mobile application built with Flutter, syncing in real-time with a secure Supabase backend.",
-      impact: "Streamlined financial reporting, providing actionable insights through interactive data visualization.",
-      tech: ["Flutter", "Supabase", "Dart", "Charts"],
+      title: "UMKM Mapping & Promotion Platform",
+      problem: "Many local MSMEs (UMKM) have great potential but lack digital discoverability and a centralized promotional platform to reach wider markets.",
+      architecture: "Cross-platform mobile application built with Flutter, integrating Google Maps API for geospatial mapping and a Firebase backend for real-time content management.",
+      impact: "Digitalized hundreds of local MSMEs into a single interactive ecosystem, drastically increasing their digital visibility and accessibility to potential customers.",
+      tech: ["Flutter", "Firebase", "Maps API", "Dart"],
       image: "/projects/umkm_dashboard.png"
     },
   ];
