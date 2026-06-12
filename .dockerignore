@@ -1,0 +1,16 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+.gitignore
+AGENTS.md
+CLAUDE.md
+CONTENT.md
+DESIGN.md
+PRD.md
+PROJECT.md
+ROADMAP.md
+TECH_STACK.md
