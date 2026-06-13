@@ -139,13 +139,18 @@ function Node({ label, subtext, type }: { label: string; subtext?: string; type:
 
 function InnerNode({ label, domain }: { label: string; domain: string }) {
   return (
-    <div className="bg-white/5 border border-white/5 hover:border-white/10 transition-colors px-4 py-3 rounded-lg flex flex-col justify-center group overflow-hidden">
+    <a 
+      href={`https://${domain}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white/5 border border-white/5 hover:border-white/20 hover:bg-white/10 transition-all duration-300 px-4 py-3 rounded-lg flex flex-col justify-center group overflow-hidden cursor-pointer shadow-none hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]"
+    >
       <div className="flex items-center gap-3 mb-1">
-        <div className="w-2 h-2 rounded-full bg-green-500/80 flex-shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
+        <div className="w-2 h-2 rounded-full bg-green-500/80 flex-shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)] group-hover:bg-green-400 group-hover:shadow-[0_0_12px_rgba(34,197,94,0.8)] transition-all" />
         <span className="text-sm font-bold text-foreground truncate group-hover:text-accent-cyan transition-colors">{label}</span>
       </div>
-      <span className="text-xs font-mono text-muted-foreground truncate pl-5 opacity-80">{domain}</span>
-    </div>
+      <span className="text-xs font-mono text-muted-foreground truncate pl-5 opacity-80 group-hover:opacity-100 transition-opacity">{domain}</span>
+    </a>
   );
 }
 
