@@ -215,12 +215,20 @@ export function Hero() {
           </p>
           
           {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-2 pointer-events-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 pointer-events-auto">
             <a 
               href="#projects"
               className="px-8 py-3.5 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(34,211,238,0.4)]"
             >
               Explore Portfolio
+            </a>
+            <a 
+              href="/RESUME_FENDI_ANDRIYANTO.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3.5 rounded-full border border-cyan-500/50 bg-cyan-500/10 text-cyan-50 font-medium hover:bg-cyan-500/20 hover:border-cyan-400 transition-all shadow-[0_0_15px_rgba(34,211,238,0.1)]"
+            >
+              View Resume
             </a>
             <a 
               href="mailto:fendiandryto@gmail.com"

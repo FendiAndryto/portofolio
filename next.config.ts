@@ -4,10 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: "standalone",
   // @ts-ignore
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  // @ts-ignore
   typescript: {
     ignoreBuildErrors: true,
   },

@@ -20,12 +20,20 @@ export function Contact() {
             Whether you need a full-stack application, an AI-powered system, or resilient self-hosted infrastructure, I can help you build it from the ground up.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
             <a 
               href="mailto:fendiandryto@gmail.com" 
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors shadow-lg shadow-foreground/10"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors shadow-lg shadow-foreground/10 flex justify-center"
             >
               Email Me
+            </a>
+            <a 
+              href="/RESUME_FENDI_ANDRIYANTO.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 rounded-full border border-cyan-500/50 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 transition-colors font-medium flex justify-center shadow-[0_0_15px_rgba(34,211,238,0.1)]"
+            >
+              View Resume
             </a>
             <a 
               href="https://github.com/FendiAndryto" 
