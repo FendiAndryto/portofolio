@@ -103,10 +103,12 @@ export function Infrastructure() {
                 DOCKER HOST
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                <InnerNode label="Portfolio Website" port="3000" />
-                <InnerNode label="SaaS Apps" port="3001" />
-                <InnerNode label="Prometheus" port="9090" />
-                <InnerNode label="PostgreSQL" port="5432" />
+                <InnerNode label="BEM Global Institut" domain="bem-global-institut.homever.my.id" />
+                <InnerNode label="Grafana Dashboard" domain="grafana.homever.my.id" />
+                <InnerNode label="Macha App" domain="macha.homever.my.id" />
+                <InnerNode label="Nikahin SaaS" domain="nikahin.web.id" />
+                <InnerNode label="Portofolio Fendi Andriyanto" domain="portofolio.homever.my.id" />
+                <InnerNode label="Presensi Global" domain="presensi-global-institut.homever.my.id" />
               </div>
             </div>
 
@@ -135,14 +137,14 @@ function Node({ label, subtext, type }: { label: string; subtext?: string; type:
   );
 }
 
-function InnerNode({ label, port }: { label: string; port: string }) {
+function InnerNode({ label, domain }: { label: string; domain: string }) {
   return (
-    <div className="bg-white/5 border border-white/5 hover:border-white/10 transition-colors px-4 py-3 rounded-lg flex items-center justify-between">
-      <div className="flex items-center gap-3">
-        <div className="w-2 h-2 rounded-full bg-green-500/80" />
-        <span className="text-sm font-medium text-foreground">{label}</span>
+    <div className="bg-white/5 border border-white/5 hover:border-white/10 transition-colors px-4 py-3 rounded-lg flex flex-col justify-center group overflow-hidden">
+      <div className="flex items-center gap-3 mb-1">
+        <div className="w-2 h-2 rounded-full bg-green-500/80 flex-shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
+        <span className="text-sm font-bold text-foreground truncate group-hover:text-accent-cyan transition-colors">{label}</span>
       </div>
-      <span className="text-xs font-mono text-muted-foreground">:{port}</span>
+      <span className="text-xs font-mono text-muted-foreground truncate pl-5 opacity-80">{domain}</span>
     </div>
   );
 }

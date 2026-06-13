@@ -12,7 +12,12 @@ export function Projects() {
       architecture: "Python-based core utilizing OpenCV for image processing, Haar Cascades for face detection, and LBPH for recognition, served via a Flask API.",
       impact: "Reduced attendance logging time by 90% while significantly increasing accuracy and eliminating proxy attendance.",
       tech: ["Python", "OpenCV", "LBPH", "Flask", "Haar Cascade"],
-      image: "/projects/face_recognition.png"
+      image: [
+        "/projects/Screenshot (34).png",
+        "/projects/Screenshot (35).png",
+        "/projects/Screenshot (36).png"
+      ],
+      isMobile: false
     },
     {
       title: "Digital Invitation SaaS",
@@ -20,7 +25,12 @@ export function Projects() {
       architecture: "Next.js frontend with SSR for SEO, backed by PostgreSQL for multi-tenant data isolation and a custom routing layer for domain mapping.",
       impact: "Enabled users to launch personalized, high-performance invitation sites in minutes without writing code.",
       tech: ["Next.js", "PostgreSQL", "TypeScript", "Tailwind"],
-      image: "/projects/digital_invitation.png"
+      image: [
+        "/projects/Screenshot (41).png",
+        "/projects/Screenshot (42).png",
+        "/projects/Screenshot (40).png"
+      ],
+      isMobile: false
     },
     {
       title: "Self Hosted Home Server",
@@ -28,7 +38,8 @@ export function Projects() {
       architecture: "Repurposed hardware running a containerized Docker environment, orchestrated by Ansible, with Cloudflare Tunnels handling secure, zero-trust internet exposure.",
       impact: "Reduced cloud hosting costs to zero while maintaining enterprise-grade uptime, security, and deployment workflows.",
       tech: ["Docker", "Ansible", "Cloudflare", "Prometheus"],
-      image: "/projects/server_infrastructure.png"
+      image: "/projects/Screenshot (43).png",
+      isMobile: false
     },
     {
       title: "UMKM Mapping & Promotion Platform",
@@ -36,7 +47,12 @@ export function Projects() {
       architecture: "Cross-platform mobile application built with Flutter, integrating Google Maps API for geospatial mapping and a Firebase backend for real-time content management.",
       impact: "Digitalized hundreds of local MSMEs into a single interactive ecosystem, drastically increasing their digital visibility and accessibility to potential customers.",
       tech: ["Flutter", "Firebase", "Maps API", "Dart"],
-      image: "/projects/umkm_dashboard.png"
+      image: [
+        "/projects/Login UMKM.jpeg",
+        "/projects/Maps UMKM.jpeg",
+        "/projects/Home UMKM.jpeg"
+      ],
+      isMobile: true
     },
   ];
 
@@ -68,14 +84,33 @@ export function Projects() {
               className="group bg-card/40 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden shadow-subtle shadow-inset hover:border-white/10 transition-colors flex flex-col"
             >
               {/* Project Mockup */}
-              <div className="h-64 bg-black/50 border-b border-white/5 relative overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10" />
-                <Image 
-                  src={project.image} 
-                  alt={project.title} 
-                  fill 
-                  className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                />
+              <div className="h-64 bg-black/50 border-b border-white/5 relative overflow-hidden flex items-center justify-center perspective-[1000px]">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent z-20 pointer-events-none" />
+                
+                {Array.isArray(project.image) ? (
+                  <div className="relative w-full h-full flex items-center justify-center mt-12 transform-style-3d">
+                    {/* Left Card */}
+                    <div className={`absolute ${project.isMobile ? 'w-[28%] aspect-[9/16] -translate-x-16' : 'w-[60%] aspect-[16/9] -translate-x-12'} rounded-lg overflow-hidden border border-white/10 shadow-2xl translate-y-4 -rotate-6 opacity-60 group-hover:-translate-x-20 group-hover:-rotate-12 group-hover:opacity-80 transition-all duration-500 ease-out z-0`}>
+                      <Image src={project.image[0]} alt={`${project.title} Screenshot 1`} fill sizes="(max-width: 768px) 50vw, 30vw" className="object-cover" />
+                    </div>
+                    {/* Right Card */}
+                    <div className={`absolute ${project.isMobile ? 'w-[28%] aspect-[9/16] translate-x-16' : 'w-[60%] aspect-[16/9] translate-x-12'} rounded-lg overflow-hidden border border-white/10 shadow-2xl translate-y-4 rotate-6 opacity-60 group-hover:translate-x-20 group-hover:rotate-12 group-hover:opacity-80 transition-all duration-500 ease-out z-0`}>
+                      <Image src={project.image[1]} alt={`${project.title} Screenshot 2`} fill sizes="(max-width: 768px) 50vw, 30vw" className="object-cover" />
+                    </div>
+                    {/* Center Card */}
+                    <div className={`absolute ${project.isMobile ? 'w-[34%] aspect-[9/16]' : 'w-[65%] aspect-[16/9]'} rounded-lg overflow-hidden border border-white/20 shadow-[0_0_30px_rgba(34,211,238,0.15)] opacity-90 group-hover:-translate-y-4 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500 ease-out z-10`}>
+                      <Image src={project.image[2]} alt={`${project.title} Screenshot 3`} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                    </div>
+                  </div>
+                ) : (
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 z-0"
+                  />
+                )}
               </div>
               
               <div className="p-8 flex flex-col flex-1 relative z-20">

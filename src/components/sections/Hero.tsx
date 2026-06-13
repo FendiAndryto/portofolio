@@ -32,8 +32,8 @@ export function Hero() {
     internet: { x: 85, y: 25 },
     cloudflare: { x: 88, y: 45 },
     docker: { x: 80, y: 65 },
-    services: { x: 65, y: 96 }, 
-    ai: { x: 35, y: 96 },       
+    services: { x: 65, y: 85 }, 
+    ai: { x: 35, y: 85 },       
     
     // Abstract left side points
     l1: { x: 10, y: 25 },
@@ -131,6 +131,7 @@ export function Hero() {
               />
               {/* Animated Packet Glow */}
               <motion.circle
+                cx={`${line.start.x}%`} cy={`${line.start.y}%`}
                 r="6" fill="rgba(34,211,238,0.4)" filter="blur(4px)"
                 animate={{
                   cx: [`${line.start.x}%`, `${line.end.x}%`],
@@ -140,6 +141,7 @@ export function Hero() {
               />
               {/* Animated Packet Core */}
               <motion.circle
+                cx={`${line.start.x}%`} cy={`${line.start.y}%`}
                 r="2" fill="#22d3ee"
                 animate={{
                   cx: [`${line.start.x}%`, `${line.end.x}%`],
