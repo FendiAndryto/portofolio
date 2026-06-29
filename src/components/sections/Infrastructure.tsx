@@ -104,11 +104,11 @@ export function Infrastructure() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                 <InnerNode label="BEM Global Institut" domain="bem-global-institut.homever.my.id" />
-                <InnerNode label="Grafana Dashboard" domain="grafana.homever.my.id" />
                 <InnerNode label="Macha App" domain="macha.homever.my.id" />
                 <InnerNode label="Nikahin SaaS" domain="nikahin.web.id" />
                 <InnerNode label="Portofolio Fendi Andriyanto" domain="portofolio.homever.my.id" />
                 <InnerNode label="Presensi Global" domain="presensi-global-institut.homever.my.id" />
+                <InnerNode label="Turnitin Slayer" domain="turnitin-slayer.homever.my.id" />
               </div>
             </div>
 
